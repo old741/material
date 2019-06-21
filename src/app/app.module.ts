@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    //MaterialModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

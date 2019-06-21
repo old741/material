@@ -1,19 +1,32 @@
 
 <div class="container-fluid">
   <h1 class="col-12"> Material </h1>
+  <hr>
   <div class="row">
     <h3 class="col-12">Formulaire : </h3>
+    <hr>
     <form  [formGroup]="myForm" class="col-6 mx-auto"><br/><br/>
-      <input type="text" formControlName="input"><br/><br/>
-      <input type="checkbox" formControlName="checkbox"><br/><br/>
+      <mat-form-field>
+          <input matInput="text" formControlName="input">
+       <!--   <input type="text" formControlName="input"><br/><br/>-->
 
-      <input type="radio" formControlName="radio" value="Femme">Femme<br/>
-      <input type="radio" formControlName="radio" value="Homme">Homme<br/><br/>
+      </mat-form-field><br/><br/>
+      <!--       
+        <input type="checkbox" formControlName="checkbox"><br/><br/> 
+      -->
+    <mat-checkbox formControlName="checkbox" >vrai/Faux</mat-checkbox><br/><br/> 
+      <!-- <input type="radio" formControlName="radio" value="Femme">Femme<br/>
+      <input type="radio" formControlName="radio" value="Homme">Homme<br/><br/> -->
+      <mat-radio-group formControlName="radio"> 
+        <mat-radio-button value="Femme">Femme</mat-radio-button>
+        <mat-radio-button value="Homme">Homme</mat-radio-button>
+      </mat-radio-group><br/><br/>
+<!--       <input type="radio" formControlName="slidetoggle" value="Femme">Femme<br/>
+      <input type="radio" formControlName="slidetoggle" value="Homme">Homme<br/><br/> -->
+      <mat-slide-toggle formControlName="slidetoggle">Newsletter</mat-slide-toggle><br/><br/>
+      <mat-slide-toggle color="warn"> ON/OFF </mat-slide-toggle>
 
-      <input type="radio" formControlName="slidetoggle" value="Femme">Femme<br/>
-      <input type="radio" formControlName="slidetoggle" value="Homme">Homme<br/><br/>
-
-      <pre>{{form.value | json}}</pre>
+      <pre>{{myForm.value | json}}</pre>
     </form>
   </div>
 </div>
